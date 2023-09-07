@@ -100,7 +100,7 @@ right:550px;
 
 <p class="head"><h3>PERSONAL DETAILS</h3></p>
 <ul>
-  <li>name :mounika.k
+  <li>Name :Mounika.k
   <li>Father name :karuppusamy.s</li>
   <li>Date of Bith :04.12.2024</li>
   <li>AGE  :19</li>
@@ -111,6 +111,31 @@ right:550px;
 <ul>
     <li> l here by declare that the  details  furnished above are true to the best of my knowledge</li>
 </ul>
+
+<div id="editor"></div>
+
+<center>
+
+<p>
+
+
+<button onclick="printDiv('htmlContent')">Print / Save Pdf</button>
+
+</p>
+
+</center>
+
+<script type="text/javascript">
+
+      function printDiv(div_id) 
+    	{
+    	  var divToPrint=document.getElementById(div_id);
+    	  var newWin=window.open('','Print-Window');
+    	  newWin.document.open();
+    	  newWin.document.write('<html><body onload="window.print()">'+divToPrint.innerHTML+'</body></html>');
+    	  newWin.document.close();
+    	  setTimeout(function() { newWin.close();},10);
+    	}
 <p class="head"><h3>DATE</h3></p>
 <p class="head"><h3>PLACE</h3></p>
 <div class="bottomright"><h3>SIGNATURE</div></h3>
